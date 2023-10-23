@@ -66,7 +66,7 @@
 				const manager = new THREE.LoadingManager();
 				const loader = new THREE.TextureLoader( manager );
 
-				loader.load( 'kandao3.jpg', function ( texture ) {
+				loader.load( 'snow.jpg', function ( texture ) {
 
 					texture.colorSpace = THREE.SRGBColorSpace;
 					texture.minFilter = THREE.NearestFilter;
@@ -75,13 +75,13 @@
 
 				} );
 
-				loader.load( 'kandao3_depthmap.jpeg', function ( depth ) {
+				// loader.load( 'kandao3_depthmap.jpeg', function ( depth ) {
 
-					depth.minFilter = THREE.NearestFilter;
-					depth.generateMipmaps = false;
-					sphere.material.displacementMap = depth;
+				// 	depth.minFilter = THREE.NearestFilter;
+				// 	depth.generateMipmaps = false;
+				// 	sphere.material.displacementMap = depth;
 
-				} );
+				// } );
 
 				// On load complete add the panoramic sphere to the scene
 				manager.onLoad = function () {
